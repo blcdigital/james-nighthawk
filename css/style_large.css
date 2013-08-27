@@ -1,0 +1,95 @@
+/**
+* black label creative theme
+*
+* @info		Large screen styling
+* @version	2.0
+* @author	Jasal Vadgama - http://blacklabelcreative.com/
+**/
+
+/**
+* GENERAL
+**/
+.contact-form label {
+	float: left;
+	padding-top: 10px;
+	width: 80px;
+}
+.select-row label {
+	padding-top: 3px;
+}
+.contact-form input[type="text"] {
+	width: 485px;
+}
+.contact-form textarea {
+	width: 505px;
+}
+
+/**
+* HEADER
+**/
+#header {
+	background-size: auto;
+}
+#header h1 {
+	margin: 170px 10px 110px;
+	width: 383px;
+	height: 98px;
+}
+.header-container {
+	margin: 0 auto;
+	width: 940px;
+}
+
+/**
+* MAIN CONTENT
+**/
+#pageWrapper {
+	margin: 0 auto;
+	width: 940px;
+}
+
+/**
+* CONTENT
+**/
+
+/** Videos **/
+.videos article {
+	margin-bottom: 3em;
+}
+
+/** Music Promo **/
+.music-promo h2 {
+	font-size: 30px;
+	line-height: 1em;
+}
+
+/**
+* SIDEBAR
+**/
+#sidebar {
+	float: right;
+	width: 300px;
+}
+
+/**
+* FOOTER
+**/
+.footer-container {
+	margin: 0 auto;
+	width: 940px;
+}
+/**
+* FOOTER
+**/
+#footer nav {
+	width: 69%;
+}
+
+/**
+* MEDIA PLAYER
+**/
+.audio-player-inner {
+	margin-right: auto;
+	margin-left: auto;
+	width: 960px;
+}
