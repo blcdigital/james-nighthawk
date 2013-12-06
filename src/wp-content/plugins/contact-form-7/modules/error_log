@@ -1,0 +1,14 @@
+[20-Nov-2013 08:10:33 Europe/London] PHP Fatal error:  Call to undefined function add_filter() in /home/jamesnig/public_html/wp-content/plugins/contact-form-7/modules/special-mail-tags.php on line 6
+[20-Nov-2013 08:10:45 Europe/London] PHP Fatal error:  Call to undefined function wpcf7_add_shortcode() in /home/jamesnig/public_html/wp-content/plugins/contact-form-7/modules/submit.php on line 8
+[20-Nov-2013 08:11:25 Europe/London] PHP Fatal error:  Call to undefined function wpcf7_add_shortcode() in /home/jamesnig/public_html/wp-content/plugins/contact-form-7/modules/text.php on line 8
+[20-Nov-2013 08:11:39 Europe/London] PHP Fatal error:  Call to undefined function wpcf7_add_shortcode() in /home/jamesnig/public_html/wp-content/plugins/contact-form-7/modules/quiz.php on line 8
+[20-Nov-2013 08:11:44 Europe/London] PHP Fatal error:  Call to undefined function wpcf7_add_shortcode() in /home/jamesnig/public_html/wp-content/plugins/contact-form-7/modules/select.php on line 8
+[20-Nov-2013 08:11:45 Europe/London] PHP Fatal error:  Call to undefined function wpcf7_add_shortcode() in /home/jamesnig/public_html/wp-content/plugins/contact-form-7/modules/captcha.php on line 8
+[20-Nov-2013 08:11:47 Europe/London] PHP Fatal error:  Call to undefined function add_filter() in /home/jamesnig/public_html/wp-content/plugins/contact-form-7/modules/akismet.php on line 6
+[20-Nov-2013 08:11:49 Europe/London] PHP Fatal error:  Call to undefined function wpcf7_add_shortcode() in /home/jamesnig/public_html/wp-content/plugins/contact-form-7/modules/checkbox.php on line 8
+[20-Nov-2013 08:11:50 Europe/London] PHP Fatal error:  Call to undefined function add_action() in /home/jamesnig/public_html/wp-content/plugins/contact-form-7/modules/flamingo.php on line 7
+[20-Nov-2013 08:11:53 Europe/London] PHP Fatal error:  Call to undefined function wpcf7_add_shortcode() in /home/jamesnig/public_html/wp-content/plugins/contact-form-7/modules/acceptance.php on line 8
+[20-Nov-2013 08:11:54 Europe/London] PHP Fatal error:  Call to undefined function add_action() in /home/jamesnig/public_html/wp-content/plugins/contact-form-7/modules/jetpack.php on line 3
+[20-Nov-2013 08:11:56 Europe/London] PHP Fatal error:  Call to undefined function wpcf7_add_shortcode() in /home/jamesnig/public_html/wp-content/plugins/contact-form-7/modules/textarea.php on line 8
+[20-Nov-2013 08:12:01 Europe/London] PHP Fatal error:  Call to undefined function wpcf7_add_shortcode() in /home/jamesnig/public_html/wp-content/plugins/contact-form-7/modules/response.php on line 8
+[20-Nov-2013 08:12:47 Europe/London] PHP Fatal error:  Call to undefined function wpcf7_add_shortcode() in /home/jamesnig/public_html/wp-content/plugins/contact-form-7/modules/file.php on line 8
