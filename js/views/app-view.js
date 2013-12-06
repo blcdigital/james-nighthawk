@@ -75,6 +75,9 @@ define([
 
 						$(App.loader).hide();
 
+						// update the page title
+						$('title').text($div.find('title').text());
+
 						$(window).scrollTop(0);
 					}
 				});

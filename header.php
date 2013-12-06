@@ -42,17 +42,22 @@
 		var docLocation = document.location.href,
 			docHost = document.location.host;
 
-		// if there is no url hash in the location
-		if (!docLocation.match(/\/#\//)) {
-			// add one and redirect
-			document.location.href = docLocation.replace(docHost, docHost + '/#');
-		}
-
 		// set js enabled class - replaces 'no-js' with 'js'
 		document.documentElement.className = document.documentElement.className.replace(/(\s|^)no-js(\s|$)/, '$1' + 'js' + '$2');
-	</script>
 
-	<script>
+		// if the url if from outside the site
+		if (!document.referrer.match(/jamesnighthawk/)) {
+			if (docLocation.match(/\/#\//)) {
+				document.location.href = docLocation.replace('/#', '/');
+			}
+		}
+
+		// if there is no url hash in the location
+		if (!docLocation.match(/\/#\//)) {
+			// add one
+			window.history.pushState(null, null, docLocation.replace(docHost, docHost + '/#'));
+		}
+
 		var _gaq = _gaq || [];
 		_gaq.push(['_setAccount', 'UA-1627709-5']);
 		_gaq.push(['_trackPageview']);
