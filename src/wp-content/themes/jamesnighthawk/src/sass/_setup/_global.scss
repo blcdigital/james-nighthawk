@@ -1,0 +1,53 @@
+/**
+* Global styles
+**/
+
+h1,
+.page h1 {
+    margin-bottom: 0.8em;
+    color: #72888b;
+    font: 25px/1.2em "MontserratRegular", Verdana, "Lucida Grande", "Gill Sans", Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+}
+.post h1 {
+    margin-bottom: 0.5em;
+    font-size: 20px;
+    line-height: 1.2em;
+    text-transform: none;
+}
+p {
+    margin-bottom: 1em;
+}
+a {
+    color: #657978;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+        text-decoration: underline;
+    }
+
+    h1 & {
+        color: #1a2f37;
+    }
+}
+
+.twitter-name {
+    color: #3c4d4f;
+    font: 16px/1.2em "MontserratRegular", Verdana, "Lucida Grande", "Gill Sans", Arial, Helvetica, sans-serif;;
+    text-transform: uppercase;
+}
+
+.visually-hidden {
+    position: absolute;
+    top: -999em;
+    left: -999em;
+}
+
+/** Loading overlay **/
+#loadingOverlay {
+    position: absolute;
+    display: none;
+    background: #ecebe5 url(images/icons/loading.gif) 50% 50% no-repeat;
+    background-color: rgba(236, 235, 229, 0.75);
+}

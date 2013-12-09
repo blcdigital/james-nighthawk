@@ -1,0 +1,41 @@
+/**
+* Wrappers and Grid
+**/
+
+body {
+    background: $background url(images/background/bg.png) 50% 0 repeat;
+    color: #333;
+    font: 14px/1.2em 'RalewayMedium', 'Verdana', 'Lucida Grande', 'Gill Sans', 'Arial', 'Helvetica', sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+#pageWrapper {
+    padding: 0 10px;
+
+    @include modular-mq(medium) {
+        padding: 20px 10px 30px;
+        overflow: hidden;
+    }
+
+    @include modular-mq(large) {
+        margin: 0 auto;
+        width: 940px;
+    }
+}
+
+#content {
+    padding-bottom: 30px;
+
+    @include modular-mq(medium) {
+        float: left;
+        padding-bottom: 0;
+        width: 63%;
+    }
+}
+@include modular-mq(medium) {
+    .page-template-template-videos-php #content,
+    .page-template-template-music-php #content {
+        width: 100%;
+    }
+}

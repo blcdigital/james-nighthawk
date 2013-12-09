@@ -11,7 +11,7 @@ define([
 	// add global app dependency
 	'app' // App
 ], function(App) {
-	var AppView = Backbone.View.extend({
+	var AudioPlayerView = Backbone.View.extend({
 			// set the taget element for the view
 			el: '.audio-player',
 
@@ -155,5 +155,5 @@ define([
 		});
 
 	// what we return here will be used by other modules
-	return AppView;
+	return AudioPlayerView;
 });

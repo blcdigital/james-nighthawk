@@ -31,3 +31,6 @@ Thumbs.db
 # Project files #
 #################
 .vagrant/
+.sass-cache/
+node_modules/
+src/wp-content/themes/jamesnighthawk/js/

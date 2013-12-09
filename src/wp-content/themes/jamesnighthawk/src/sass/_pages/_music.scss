@@ -1,0 +1,176 @@
+/**
+* Music
+**/
+
+.music {
+    article {
+        margin-bottom: 2em;
+
+        @include modular-mq(medium) {
+            margin-bottom: 3em;
+            overflow: hidden;
+        }
+    }
+
+    header {
+        margin-bottom: 1em;
+
+        @include modular-mq(medium) {
+            float: left;
+            width: 240px;
+        }
+
+        form {
+            margin-bottom: 1em;
+        }
+    }
+
+    select {
+        margin-bottom: 1em;
+    }
+
+    h1 {
+        color: #123246;
+        font: 20px/1.2em 'RalewayBold', 'Verdana', 'Lucida Grande', 'Gill Sans', 'Arial', 'Helvetica', sans-serif;
+        text-transform: none;
+
+        @include modular-mq(small) {
+            span {
+                display: block;
+                margin-top: 0.5em;
+            }
+        }
+    }
+
+    h2 {
+        margin-bottom: 0.5em;
+        color: #123246;
+        font: 16px/1.2em 'RalewayBold', 'Verdana', 'Lucida Grande', 'Gill Sans', 'Arial', 'Helvetica', sans-serif;
+    }
+
+    .album-image {
+        margin-bottom: 1em;
+        width: 100%;
+        height: auto;
+
+        @include modular-mq(small) {
+            float: left;
+            margin-right: 15px;
+            width: auto;
+        }
+
+        @include modular-mq(medium) {
+            float: none;
+            margin-right: 0;
+        }
+    }
+
+    ol {
+        counter-reset: li;
+        color: #123246;
+
+        @include modular-mq(small) {
+            clear: both;
+        }
+
+        @include modular-mq(medium) {
+            clear: none;
+            margin-left: 240px;
+        }
+
+        li {
+            position: relative;
+            padding: 6px 0 6px 60px;
+            border-top: 1px solid #b7b7b7;
+            list-style: none; /* Disable the normal item numbering */
+
+            &:before {
+                content: counter(li); /* Use the counter as content */
+                counter-increment: li; /* Increment the counter by 1 */
+                /* Position and style the number */
+                position: absolute;
+                top: 6px;
+                left: 40px;
+            }
+
+            &:first-child {
+                border-top: 0;
+            }
+        }
+    }
+
+    .track-time {
+        float: right;
+        color: #7e7979;
+    }
+
+    .has-track a {
+        display: block;
+        margin-left: -60px;
+        padding-left: 60px;
+        background: url(images/icons/icon-play.png) 15px -31px no-repeat;
+        color: #123246;
+    }
+
+    .pause-track a {
+        background-position: 15px 3px;
+    }
+}
+
+/** Music Promo **/
+.music-promo {
+    padding: 20px 20px 0;
+    background: rgba(208, 204, 185, 0.25);
+
+    @include modular-mq(medium) {
+        padding-bottom: 5px;
+
+        input[type="text"] {
+            float: left;
+            width: 50%;
+        }
+        input[type="submit"] {
+            float: left;
+            margin: 7px 0 0 15px;
+        }
+    }
+
+    img {
+        float: left;
+        margin-right: 15px;
+        margin-bottom: 15px;
+    }
+
+    h2 {
+        color: #123246;
+        font: 20px/1.2em "RalewayBold", Verdana, "Lucida Grande", "Gill Sans", Arial, Helvetica, sans-serif;
+
+        @include modular-mq(medium) {
+            margin-bottom: 1em;
+            font-size: 25px;
+            line-height: 1em;
+        }
+
+        @include modular-mq(large) {
+            font-size: 30px;
+            line-height: 1em;
+        }
+    }
+
+    form {
+        clear: both;
+
+        @include modular-mq(medium) {
+            clear: none;
+        }
+
+        p {
+            overflow: hidden;
+        }
+    }
+
+    label {
+        color: #123246;
+        font: 16px/1.2em "RalewayBold", Verdana, "Lucida Grande", "Gill Sans", Arial, Helvetica, sans-serif;
+    }
+}

@@ -43,7 +43,7 @@
 			docHost = document.location.host;
 
 		// set js enabled class - replaces 'no-js' with 'js'
-		document.documentElement.className = document.documentElement.className.replace(/(\s|^)no-js(\s|$)/, '$1' + 'js' + '$2');
+		//document.documentElement.className = document.documentElement.className.replace(/(\s|^)no-js(\s|$)/, '$1' + 'js' + '$2');
 
 		// if the url if from outside the site
 		if (!document.referrer.match(/jamesnighthawk/)) {
@@ -71,17 +71,13 @@
 
 	<link rel="profile" href="http://gmpg.org/xfn/11" />
 	<link href="<?php bloginfo( 'stylesheet_directory' ); ?>/css/mediaelementplayer.css" media="screen" rel="stylesheet" />
-	<link href="<?php bloginfo( 'stylesheet_directory' ); ?>/css/reset.css" media="screen" rel="stylesheet">
-	<link href="<?php bloginfo( 'stylesheet_url' ); ?>" media="screen" rel="stylesheet" />
-	<link href="<?php bloginfo( 'stylesheet_directory' ); ?>/css/style_small.css" media="screen and (min-width: 479px)" rel="stylesheet" />
-	<link href="<?php bloginfo( 'stylesheet_directory' ); ?>/css/style_medium.css" media="screen and (min-width: 767px)" rel="stylesheet" />
-	<link href="<?php bloginfo( 'stylesheet_directory' ); ?>/css/style_large.css" media="screen and (min-width: 959px)" rel="stylesheet" />
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 
+	<!--[if gte IE 9]><!-->
+		<link href="<?php bloginfo( 'stylesheet_url' ); ?>" media="screen" rel="stylesheet" />
+	<!--<![endif]-->
 	<!--[if lt IE 9]>
-		<link href="<?php bloginfo( 'stylesheet_directory' ); ?>/css/style_small.css" media="screen" rel="stylesheet" />
-		<link href="<?php bloginfo( 'stylesheet_directory' ); ?>/css/style_medium.css" media="screen" rel="stylesheet" />
-		<link href="<?php bloginfo( 'stylesheet_directory' ); ?>/css/style_large.css" media="screen" rel="stylesheet" />
+		<link href="<?php bloginfo( 'stylesheet_directory' ); ?>/ie.css" media="screen" rel="stylesheet" />
 
 		<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->

@@ -182,36 +182,6 @@ function blacklabelcreative_widgets_init() {
 		'before_title' => '<h3 class="widget-title">',
 		'after_title' => '</h3>',
 	) );
-
-	register_sidebar( array(
-		'name' => __( 'Footer Area One', 'blacklabelcreative' ),
-		'id' => 'sidebar-3',
-		'description' => __( 'An optional widget area for your site footer', 'blacklabelcreative' ),
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget' => "</aside>",
-		'before_title' => '<h3 class="widget-title">',
-		'after_title' => '</h3>',
-	) );
-
-	register_sidebar( array(
-		'name' => __( 'Footer Area Two', 'blacklabelcreative' ),
-		'id' => 'sidebar-4',
-		'description' => __( 'An optional widget area for your site footer', 'blacklabelcreative' ),
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget' => "</aside>",
-		'before_title' => '<h3 class="widget-title">',
-		'after_title' => '</h3>',
-	) );
-
-	register_sidebar( array(
-		'name' => __( 'Footer Area Three', 'blacklabelcreative' ),
-		'id' => 'sidebar-5',
-		'description' => __( 'An optional widget area for your site footer', 'blacklabelcreative' ),
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget' => "</aside>",
-		'before_title' => '<h3 class="widget-title">',
-		'after_title' => '</h3>',
-	) );
 }
 add_action( 'widgets_init', 'blacklabelcreative_widgets_init' );
 

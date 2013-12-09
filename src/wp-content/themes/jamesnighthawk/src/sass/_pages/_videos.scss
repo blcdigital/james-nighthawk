@@ -1,0 +1,82 @@
+/**
+* Videos
+**/
+
+.videos {
+    article {
+        position: relative;
+        margin-bottom: 2em;
+
+        @include modular-mq(medium) {
+            float: left;
+            margin-left: 5%;
+            width: 47.5%;
+
+            &:nth-child(2n) {
+                margin-left: 0;
+            }
+        }
+
+        @include modular-mq(large) {
+            margin-bottom: 3em;
+        }
+
+        h1 {
+            margin: 0;
+            padding-bottom: 0.8em;
+            color: #304548;
+            font: 20px/1.2em "RalewayMedium", Verdana, "Lucida Grande", "Gill Sans", Arial, Helvetica, sans-serif;
+            text-transform: none;
+        }
+
+        a {
+            position: relative;
+            display: block;
+
+            &:hover span,
+            &:focus span {
+                display: block;
+            }
+        }
+
+        span {
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: none;
+            width: 100%;
+            height: 99%;
+            background: rgb(137, 153, 154);
+            background: rgba(137, 153, 154, 0.7);
+        }
+
+        strong {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            display: block;
+            margin: -32.5px 0 0 -25px;
+            padding: 25px 0;
+            width: 65px;
+            background: #000;
+            border-radius: 50px;
+            color: #fff;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    iframe {
+        position: absolute;
+        left: 0;
+    }
+}
+
+.touch .videos article span {
+    display: block;
+}

@@ -40,8 +40,7 @@
 	</div>
 </footer><!-- #footer -->
 
-<script src="<?php bloginfo( 'stylesheet_directory' ); ?>/js/libs/modernizr/modernizr.js"></script>
-<script data-main="<?php bloginfo( 'stylesheet_directory' ); ?>/js/main" src="<?php bloginfo( 'stylesheet_directory' ); ?>/js/libs/require/require.js"></script>
+<script data-main="<?php bloginfo( 'stylesheet_directory' ); ?>/js/script" src="<?php bloginfo( 'stylesheet_directory' ); ?>/js/libs/require/require.js"></script>
 
 <?php wp_footer(); ?>
 

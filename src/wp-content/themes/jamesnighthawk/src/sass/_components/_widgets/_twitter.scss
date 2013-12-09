@@ -1,0 +1,28 @@
+/**
+* Twitter
+**/
+
+.widget_twitter {
+    li {
+        margin-bottom: 1em;
+        padding-bottom: 1em;
+        border-bottom: 1px solid #b1b1b1;
+    }
+
+    .entry-content,
+    .entry-meta,
+    .intent-meta {
+        display: block;
+    }
+    .entry-meta {
+        margin: 0.5em 0;
+        font-size: 12px;
+        line-height: 1em;
+    }
+    .intent-meta a {
+        display: inline-block;
+        margin-right: 10px;
+        font-size: 12px;
+        line-height: 1em;
+    }
+}
