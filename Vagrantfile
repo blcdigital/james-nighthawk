@@ -53,5 +53,4 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   # Enable shell provisioning
   config.vm.provision :shell, :path => "provision/lamp.sh"
-  #config.vm.provision :shell, :path => "provision/node.sh"
 end
