@@ -1,3 +1,43 @@
 /**
 * Footer
 **/
+
+#footer {
+    padding-top: 14px;
+    background: url(assets/images/background/bg-footer.jpg) 0 0 repeat-x;
+    color: #909e9e;
+}
+.footer-wrapper {
+    padding: 20px 10px 10px;
+    background: url(assets/images/background/bg-footer-tile.png) 0 0 repeat;
+    overflow: hidden;
+}
+#footer nav {
+    float: left;
+    width: 50%;
+
+    @include modular-mq(medium) {
+        width: 66%;
+    }
+}
+#footer nav a {
+    display: inline-block;
+    margin-bottom: 5px;
+    color: #909e9e;
+}
+#footer ul {
+    margin-bottom: 0.5em;
+}
+.copyright {
+    margin-bottom: 0.5em;
+}
+
+@include modular-mq(small) {
+    #footer .music-links {
+        margin-bottom: 30px;
+    }
+    #footer .music-links li {
+        display: inline-block;
+        margin-right: 15px;
+    }
+}

@@ -1,3 +1,59 @@
 /**
 * Header
 **/
+
+#header {
+    margin-bottom: 20px;
+    background: #000 url(assets/images/header.jpg) center top no-repeat;
+    background-size: 100%;
+    overflow: hidden;
+
+    h1 {
+        float: left;
+        width: 191px;
+        height: 49px;
+        margin: 20px 10px;
+        background: url(assets/images/james-nighthawk.png) 0 0 no-repeat;
+        background-size: 100%;
+        text-indent: -999em;
+
+        @include modular-mq(small) {
+            margin: 50px 10px;
+        }
+
+        @include modular-mq(medium) {
+            margin: 70px 10px;
+            width: 300px;
+            height: 77px;
+        }
+    }
+
+    nav {
+        clear: both;
+        padding: 0 10px 15px;
+        background: url(assets/images/background/bg-header.jpg) center bottom repeat-x;
+        font: 14px/1.2em 'MontserratRegular', 'Verdana', 'Lucida Grande', 'Gill Sans', 'Arial', 'Helvetica', sans-serif;
+    }
+
+    nav a:hover,
+    nav a:focus {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    li {
+        display: inline-block;
+        margin-left: 10px;
+        text-transform: uppercase;
+
+        &:first-child {
+            margin-left: 0;
+        }
+
+        @include modular-mq(medium) {
+            width: 15%;
+            font-size: 18px;
+            text-align: center;
+        }
+    }
+}

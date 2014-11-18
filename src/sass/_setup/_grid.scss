@@ -2,14 +2,28 @@
 * Wrappers and Grid
 **/
 
-body {
-    background: $background;
-    color: #333;
-    font: 14px/1.2em Arial, Helvetica, sans-serif;
-    -ms-text-size-adjust: 100%;
-    -webkit-text-size-adjust: 100%;
+#mainContent {
+    padding: 0 10px;
+
+    @include modular-mq(medium) {
+        padding: 20px 10px 30px;
+        overflow: hidden;
+    }
 }
 
-#pageWrapper {
-    width: 960px;
+#content {
+    padding-bottom: 30px;
+
+    @include modular-mq(medium) {
+        float: left;
+        padding-bottom: 0;
+        width: 63%;
+    }
+}
+
+@include modular-mq(medium) {
+    .page-template-template-videos-php #content,
+    .page-template-template-music-php #content {
+        width: 100%;
+    }
 }

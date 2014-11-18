@@ -1,3 +1,53 @@
 /**
 * Global styles
 **/
+
+body {
+    background: #ecebe5 url(assets/images/background/bg.png) 50% 0 repeat;
+    color: #333;
+    font: 14px/1.2em 'RalewayMedium', 'Verdana', 'Lucida Grande', 'Gill Sans', 'Arial', 'Helvetica', sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+h1,
+.page h1 {
+    margin-bottom: 0.8em;
+    color: #72888b;
+    font: 25px/1.2em 'MontserratRegular', 'Verdana', 'Lucida Grande', 'Gill Sans', 'Arial', 'Helvetica', sans-serif;
+    text-transform: uppercase;
+}
+.post h1 {
+    margin-bottom: 0.5em;
+    font-size: 20px;
+    line-height: 1.2em;
+    text-transform: none;
+}
+
+p {
+    margin-bottom: 1em;
+}
+
+a {
+    color: #657978;
+    text-decoration: none;
+}
+a:hover,
+a:focus {
+    text-decoration: underline;
+}
+h1 a {
+    color: #1a2f37;
+}
+
+.twitter-name {
+    color: #3c4d4f;
+    font: 16px/1.2em 'MontserratRegular', 'Verdana', 'Lucida Grande', 'Gill Sans', 'Arial', 'Helvetica', sans-serif;
+    text-transform: uppercase;
+}
+
+.visually-hidden {
+    position: absolute;
+    top: -999em;
+    left: -999em;
+}

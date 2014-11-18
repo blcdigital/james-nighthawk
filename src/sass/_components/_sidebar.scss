@@ -1,0 +1,10 @@
+/**
+* Sidebar
+**/
+
+#sidebar {
+    @include modular-mq(medium) {
+        float: right;
+        width: 33%;
+    }
+}

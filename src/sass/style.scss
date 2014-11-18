@@ -2,11 +2,17 @@
 @import "_setup/variables";
 @import "_setup/mixins";
 @import "_setup/reset";
-@import "_setup/global";
+@import "_setup/fonts";
 @import "_setup/grid";
+@import "_setup/global";
 
 // Components
+@import "_components/form";
 @import "_components/header";
 @import "_components/footer";
+@import "_components/widgets";
 
 // Pages
+@import "_pages/blog";
+@import "_pages/music";
+@import "_pages/video";
