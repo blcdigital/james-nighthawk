@@ -1,0 +1,13 @@
+[24-Aug-2013 21:58:16 Europe/London] PHP Fatal error:  Call to undefined function add_action() in /home/jamesnig/public_html/wp-content/plugins/contact-form-7/includes/controller.php on line 3
+[20-Nov-2013 08:06:50 Europe/London] PHP Fatal error:  Call to undefined function add_filter() in /home/jamesnig/public_html/wp-content/plugins/contact-form-7/includes/capabilities.php on line 3
+[20-Nov-2013 08:06:51 Europe/London] PHP Fatal error:  Call to undefined function add_action() in /home/jamesnig/public_html/wp-content/plugins/contact-form-7/includes/controller.php on line 3
+[20-Nov-2013 08:11:35 Europe/London] PHP Fatal error:  Call to undefined function add_filter() in /home/jamesnig/public_html/wp-content/plugins/contact-form-7/includes/capabilities.php on line 3
+[20-Nov-2013 08:11:37 Europe/London] PHP Fatal error:  Call to undefined function add_action() in /home/jamesnig/public_html/wp-content/plugins/contact-form-7/includes/controller.php on line 3
+[25-Feb-2014 05:38:29 Europe/London] PHP Fatal error:  Call to undefined function add_action() in /home/jamesnig/public_html/wp-content/plugins/contact-form-7/includes/controller.php on line 3
+[25-Feb-2014 05:38:58 Europe/London] PHP Fatal error:  Call to undefined function add_filter() in /home/jamesnig/public_html/wp-content/plugins/contact-form-7/includes/capabilities.php on line 3
+[25-Feb-2014 05:42:40 Europe/London] PHP Fatal error:  Call to undefined function add_filter() in /home/jamesnig/public_html/wp-content/plugins/contact-form-7/includes/capabilities.php on line 3
+[25-Feb-2014 05:43:30 Europe/London] PHP Fatal error:  Call to undefined function add_action() in /home/jamesnig/public_html/wp-content/plugins/contact-form-7/includes/controller.php on line 3
+[22-Jul-2014 17:20:40 UTC] PHP Fatal error:  Call to undefined function add_action() in /home/jamesnig/public_html/wp-content/plugins/contact-form-7/includes/controller.php on line 3
+[22-Jul-2014 17:20:58 UTC] PHP Fatal error:  Call to undefined function add_filter() in /home/jamesnig/public_html/wp-content/plugins/contact-form-7/includes/capabilities.php on line 3
+[22-Jul-2014 17:26:07 UTC] PHP Fatal error:  Call to undefined function add_action() in /home/jamesnig/public_html/wp-content/plugins/contact-form-7/includes/controller.php on line 3
+[22-Jul-2014 17:26:08 UTC] PHP Fatal error:  Call to undefined function add_filter() in /home/jamesnig/public_html/wp-content/plugins/contact-form-7/includes/capabilities.php on line 3

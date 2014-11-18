@@ -1,0 +1,1 @@
+var LocalCharity=LocalCharity||{};LocalCharity=function(){return{init:function(){},pageInit:function(){}}}(),$(function(){LocalCharity.init()}),$(window).load(function(){LocalCharity.pageInit()});

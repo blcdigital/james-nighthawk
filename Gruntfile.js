@@ -7,7 +7,7 @@ module.exports = function(grunt) {
         meta: {
             css_banner: '/*\n' +
                 'Theme Name: James Nighthawk\n' +
-                'Theme URI: http://blacklabelcreative.com/\n' +
+                'Theme URI: http://[YOUR URL]/\n' +
                 'Author: <%= pkg.author %>\n' +
                 'Description: <%= pkg.description %>\n' +
                 'Version: <%= pkg.version %>\n' +
@@ -29,13 +29,6 @@ module.exports = function(grunt) {
                 eqnull: true,
                 browser: true,
                 globals: {
-                    // RequireJS
-                    define: true,
-                    require: true,
-                    // lodash
-                    _: true,
-                    // BackboneJS
-                    Backbone: true,
                     // jQuery
                     jQuery: true,
                     // extras
@@ -45,38 +38,14 @@ module.exports = function(grunt) {
             },
             all: [
                 'Gruntfile.js',
-                'src/wp-content/themes/jamesnighthawk/src/js/*.js',
-                'src/wp-content/themes/jamesnighthawk/src/js/collections/**/*.js',
-                'src/wp-content/themes/jamesnighthawk/src/js/models/**/*.js',
-                'src/wp-content/themes/jamesnighthawk/src/js/views/**/*.js'
+                'src/js/*.js',
             ]
         },
-        requirejs: {
-            compile: {
-                options: {
-                    baseUrl: 'src/wp-content/themes/jamesnighthawk/src/js',
-                    mainConfigFile: 'src/wp-content/themes/jamesnighthawk/src/js/main.js',
-                    name: 'main',
-                    out: 'src/wp-content/themes/jamesnighthawk/js/script.js',
-                    preserveLicenseComments: false
-                }
-            }
-        },
-        copy: {
-            require: {
-                files: [
-                    {
-                        src: ['src/wp-content/themes/jamesnighthawk/src/js/libs/require/require.js'],
-                        dest: 'src/wp-content/themes/jamesnighthawk/js/libs/require/require.js'
-                    }
-                ]
-            }
-        },
         sass: {
-            dev: {
+            main: {
                 files: {
-                    'src/wp-content/themes/jamesnighthawk/style.css': 'src/wp-content/themes/jamesnighthawk/src/sass/style.scss',
-                    'src/wp-content/themes/jamesnighthawk/ie.css' : 'src/wp-content/themes/jamesnighthawk/src/sass/ie.scss'
+                    'site/wp-content/themes/jamesnighthawk/style.css': 'src/sass/style.scss',
+                    'site/wp-content/themes/jamesnighthawk/ie.css' : 'src/sass/ie.scss'
                 }
             }
         },
@@ -86,19 +55,62 @@ module.exports = function(grunt) {
                     banner: '<%= meta.css_banner %>'
                 },
                 files: {
-                    'src/wp-content/themes/jamesnighthawk/style.css': ['src/wp-content/themes/jamesnighthawk/style.css'],
-                    'src/wp-content/themes/jamesnighthawk/ie.css': ['src/wp-content/themes/jamesnighthawk/ie.css']
+                    'site/wp-content/themes/jamesnighthawk/style.css': ['site/wp-content/themes/jamesnighthawk/style.css'],
+                    'site/wp-content/themes/jamesnighthawk/ie.css': ['site/wp-content/themes/jamesnighthawk/ie.css']
                 }
+            }
+        },
+        uglify: {
+            options: {
+                mangle: {
+                    except: ['jQuery']
+                }
+            },
+            deploy: {
+                files: {
+                    'site/wp-content/themes/jamesnighthawk/assets/js/libs.js': ['src/js/libs/**/*.js'],
+                    'site/wp-content/themes/jamesnighthawk/assets/js/script.js': ['src/js/script.js']
+                }
+            }
+        },
+        copy: {
+            fonts: {
+                files: [
+                    {
+                        expand: true,
+                        cwd: 'src/fonts/',
+                        src: ['**'],
+                        dest: 'site/wp-content/themes/jamesnighthawk/assets/fonts/'
+                    }
+                ]
+            },
+            images: {
+                files: [
+                    {
+                        expand: true,
+                        cwd: 'src/images/public/',
+                        src: ['**'],
+                        dest: 'site/wp-content/themes/jamesnighthawk/assets/images/'
+                    }
+                ]
             }
         },
         watch: {
             sass: {
-                files: ['src/wp-content/themes/jamesnighthawk/src/sass/*.scss'],
-                tasks: 'sass'
+                files: ['src/sass/**/*.scss'],
+                tasks: ['sass', 'cssmin']
             },
-            lint: {
+            js: {
                 files: '<%= jshint.all %>',
-                tasks: ['jshint', 'requirejs']
+                tasks: ['jshint', 'uglify']
+            },
+            images: {
+                files: ['src/images/public/**/*.*'],
+                tasks: ['copy:images']
+            },
+            fonts: {
+                files: ['src/fonts/**/*.*'],
+                tasks: ['copy:fonts']
             }
         }
     });
@@ -107,12 +119,12 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-jshint');
-    grunt.loadNpmTasks('grunt-contrib-requirejs');
     grunt.loadNpmTasks('grunt-contrib-sass');
+    grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-watch');
 
-    // Default task(s)
+    // // Default task(s)
     grunt.registerTask('test', ['jshint']);
-    grunt.registerTask('build', ['sass', 'requirejs', 'copy']);
-    grunt.registerTask('default', [/*'test', */'build', 'cssmin']);
+    grunt.registerTask('build', ['sass', 'cssmin', 'uglify', 'copy']);
+    grunt.registerTask('default', ['test', 'build']);
 };

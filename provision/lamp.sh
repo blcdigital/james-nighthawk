@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # node.js settings
-NODE_VERSION=0.10.22
+NODE_VERSION=0.10.26
 NODE_SOURCE=http://nodejs.org/dist/v$NODE_VERSION/node-v$NODE_VERSION.tar.gz
 
 # If apache2 does not exist
@@ -27,8 +27,8 @@ then
     echo "INFO: Installing apache2..."
     apt-get install -y apache2
     rm -rf /var/www
-    ln -fs /vagrant/src /var/www
-    echo "/var/www === /vagrant/src"
+    ln -fs /vagrant/site /var/www
+    echo "/var/www === /vagrant/site"
 
     # Install PHP5
     echo "INFO: Installing php5..."
@@ -84,6 +84,10 @@ then
     apt-get update
     apt-get install -y nodejs
 
+    # Install Grunt.js CLI
+    echo "INFO: Installing Grunt.js CLI..."
+    npm install -g grunt-cli
+
     # Restart services
     echo "INFO: Restarting apache..."
     /etc/init.d/apache2 restart
@@ -91,6 +95,12 @@ then
     # Clean up
     echo "INFO: Cleaning up..."
     apt-get clean
+
+    # Amend config file
+    #rm /etc/apache2/sites-available/default
+    #touch /etc/apache2/sites-available/def0ault
+    #echo "dave" >> /etc/apache2/sites-available/default
+    #/etc/init.d/apache2 restart
 
     echo "INFO: Provisioning Vagrant LAMP complete!"
 fi
