@@ -4,7 +4,7 @@
  * This is the most generic template file in a WordPress theme
  * and one of the two required files for a theme (the other being style.css).
  * It is used to display a page when nothing more specific matches a query.
- * E.g., it puts together the home page when no home.php file 
+ * E.g., it puts together the home page when no home.php file
  *
  * Please see /external/starkers-utilities.php for info on Starkers_Utilities::get_template_parts()
  *
@@ -17,34 +17,32 @@
 
 <div id="mainContent">
     <div id="content" role="main">
-        <section class="blog-posts">
-            <h1>Latest News</h1>
+
+        <?php if ( have_posts() ) : ?>
+            <h1>Blog</h1>
+
             <?php
-            /* Get the latest post */
-            $args = array( 'numberposts' => 4, 'offset' => 1 );
-            $lastposts = get_posts( $args );
+            //blacklabelcreative_content_nav( 'nav-above' );
 
-            foreach($lastposts as $post) :
-                setup_postdata($post);
-            ?>
+            while ( have_posts() ) : the_post();
+                get_template_part( 'content', 'blog' );
+            endwhile;
 
-            <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+            //blacklabelcreative_content_nav( 'nav-below' );
+        else : ?>
+            <article id="post-0" class="post no-results not-found">
                 <header>
-                    <h1><a href="<?php the_permalink(); ?>" title="<?php get_the_title(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
-
-                    <?php if ( 'post' == get_post_type() ) : ?>
-                        <div class="entry-meta">
-                            <?php //blacklabelcreative_posted_on(); ?>
-                        </div>
-                    <?php endif; ?>
+                    <h1>Nothing Found</h1>
                 </header>
 
-                <?php the_excerpt(); ?>
+                <div class="entry-content">
+                    <p>Apologies, but no results were found for the requested archive. Perhaps searching will help find a related post.</p>
+                </div>
             </article>
-
-            <?php endforeach; ?>
-        </section>
+        <?php endif; ?>
     </div>
+
+    <?php Starkers_Utilities::get_template_parts( array( 'parts/sidebars/sidebar' ) ); ?>
 </div>
 
 <?php Starkers_Utilities::get_template_parts( array( 'parts/shared/footer', 'parts/shared/html-footer' ) ); ?>

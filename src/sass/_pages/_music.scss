@@ -2,104 +2,106 @@
 * Music
 **/
 
-.music article {
-    margin-bottom: 2em;
+section.music {
+    article {
+        margin-bottom: 2em;
 
-    @include modular-mq(medium) {
-        margin-bottom: 3em;
-        overflow: hidden;
-    }
-}
-.music header {
-    margin-bottom: 1em;
-
-    @include modular-mq(medium) {
-        float: left;
-        width: 240px;
-    }
-}
-.music header form {
-    margin-bottom: 1em;
-}
-.music select {
-    margin-bottom: 1em;
-}
-.music h1 {
-    color: #123246;
-    font: 20px/1.2em 'RalewayBold', 'Verdana', 'Lucida Grande', 'Gill Sans', 'Arial', 'Helvetica', sans-serif;
-    text-transform: none;
-
-    @include modular-mq(small) {
-        span {
-            display: block;
-            margin-top: 0.5em;
+        @include modular-mq(medium) {
+            margin-bottom: 3em;
+            overflow: hidden;
         }
     }
-}
-.music h2 {
-    margin-bottom: 0.5em;
-    color: #123246;
-    font: 16px/1.2em 'RalewayBold', 'Verdana', 'Lucida Grande', 'Gill Sans', 'Arial', 'Helvetica', sans-serif;
-}
-.music .album-image {
-    margin-bottom: 1em;
-    width: 100%;
-    height: auto;
 
-    @include modular-mq(small) {
-        float: left;
-        margin-right: 15px;
-        width: auto;
+    header {
+        margin-bottom: 1em;
+
+        @include modular-mq(medium) {
+            float: left;
+            width: 240px;
+        }
+
+        form {
+            margin-bottom: 1em;
+        }
     }
 
-    @include modular-mq(medium) {
-        float: none;
-        margin-right: 0;
-    }
-}
-.music ol {
-    counter-reset: li;
-    color: #123246;
-
-    @include modular-mq(small) {
-        clear: both;
+    select {
+        margin-bottom: 1em;
     }
 
-    @include modular-mq(medium) {
-        clear: none;
-        margin-left: 240px;
+    h1 {
+        color: #123246;
+        font: 20px/1.2em 'RalewayBold', 'Verdana', 'Lucida Grande', 'Gill Sans', 'Arial', 'Helvetica', sans-serif;
+        text-transform: none;
+
+        @include modular-mq(small) {
+            span {
+                display: block;
+                margin-top: 0.5em;
+            }
+        }
     }
-}
-.music li {
-    position: relative;
-    padding: 6px 0 6px 60px;
-    border-top: 1px solid #b7b7b7;
-    list-style: none; /* Disable the normal item numbering */
-}
-.music li:before {
-    content: counter(li); /* Use the counter as content */
-    counter-increment: li; /* Increment the counter by 1 */
-    /* Position and style the number */
-    position: absolute;
-    top: 6px;
-    left: 40px;
-}
-.music li:first-child {
-    border-top: 0;
-}
-.music .track-time {
-    float: right;
-    color: #7e7979;
-}
-.music .has-track a {
-    display: block;
-    margin-left: -60px;
-    padding-left: 60px;
-    background: url(assets/images/icons/icon-play.png) 15px -31px no-repeat;
-    color: #123246;
-}
-.music .pause-track a {
-    background-position: 15px 3px;
+
+    h2 {
+        margin-bottom: 0.5em;
+        color: #123246;
+        font: 16px/1.2em 'RalewayBold', 'Verdana', 'Lucida Grande', 'Gill Sans', 'Arial', 'Helvetica', sans-serif;
+    }
+
+    .album-image {
+        margin-bottom: 1em;
+        width: 100%;
+        height: auto;
+
+        @include modular-mq(small) {
+            float: left;
+            margin-right: 15px;
+            width: auto;
+        }
+
+        @include modular-mq(medium) {
+            float: none;
+            margin-right: 0;
+        }
+    }
+
+    ol {
+        counter-reset: li;
+        color: #123246;
+
+        @include modular-mq(small) {
+            clear: both;
+        }
+
+        @include modular-mq(medium) {
+            clear: none;
+            margin-left: 240px;
+        }
+    }
+
+    li {
+        position: relative;
+        padding: 6px 10px 6px 30px;
+        border-top: 1px solid #b7b7b7;
+        list-style: none; /* Disable the normal item numbering */
+
+        &:before {
+            content: counter(li); /* Use the counter as content */
+            counter-increment: li; /* Increment the counter by 1 */
+            /* Position and style the number */
+            position: absolute;
+            top: 6px;
+            left: 10px;
+        }
+        &:first-child {
+            border-top: 0;
+        }
+    }
+
+    .track-time {
+        float: right;
+        color: #7e7979;
+    }
 }
 
 
@@ -124,6 +126,11 @@
     @include modular-mq(medium) {
         margin-bottom: 1em;
         font-size: 25px;
+        line-height: 1em;
+    }
+
+    @include modular-mq(large) {
+        font-size: 30px;
         line-height: 1em;
     }
 }

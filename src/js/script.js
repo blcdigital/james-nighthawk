@@ -1,30 +1,61 @@
 /*jslint eqeqeq: true, undef: true */
 /*global $, window, console, alert */
 
-var LocalCharity = LocalCharity || {};
+var JamesNighthawk = JamesNighthawk || {};
 
-LocalCharity = (function() {
-	// PRIVATE VARIABLES
+JamesNighthawk = (function() {
+    // PRIVATE VARIABLES
+    var
 
-	// PRIVATE FUNCTIONS
+    // PRIVATE FUNCTIONS
+        initVideos = function() {
+            var
+                $videos = $('article.videos')
+            ;
 
-	// PUBLIC METHODS
-	return {
-		init: function() {
-			// DOM ready
-		},
-		pageInit: function() {
-			// page load
-		}
-	};
+            if ($videos.length < 1) {
+                return;
+            }
+
+            $videos.each(function(index, item) {
+                var
+                    $item = $(item),
+                    $iframe = $('<iframe frameborder="0" allowfullscreen />')
+                ;
+
+                $item.on('click', 'a', function(e) {
+                    e.preventDefault();
+
+                    $iframe.css({
+                        top: $item.find('h1').outerHeight(),
+                        width: $item.find('a').width(),
+                        height: $item.find('a').height()
+                    }).attr('src', 'http://www.youtube.com/embed/' + $item.find('a').attr('data-video')).appendTo($item);
+                });
+            });
+        }
+    ;
+
+    // PUBLIC METHODS
+    return {
+        init: function() {
+            // DOM ready
+
+            // init videos
+            initVideos();
+        }//,
+        // pageInit: function() {
+        //     // page load
+        // }
+    };
 }());
 
 // ON DOM READY
 $(function() {
-	LocalCharity.init();
+    JamesNighthawk.init();
 });
 
 // ON PAGE LOAD
-$(window).load(function() {
-	LocalCharity.pageInit();
-});
+// $(window).load(function() {
+//     JamesNighthawk.pageInit();
+// });

@@ -45,6 +45,8 @@
             <?php endforeach; ?>
         </section>
     </div>
+
+    <?php Starkers_Utilities::get_template_parts( array( 'parts/sidebars/sidebar' ) ); ?>
 </div>
 
 <?php Starkers_Utilities::get_template_parts( array( 'parts/shared/footer', 'parts/shared/html-footer' ) ); ?>

@@ -9,6 +9,11 @@
         padding: 20px 10px 30px;
         overflow: hidden;
     }
+
+    @include modular-mq(large) {
+        margin: 0 auto;
+        width: 940px;
+    }
 }
 
 #content {

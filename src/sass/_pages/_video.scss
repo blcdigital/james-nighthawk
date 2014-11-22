@@ -15,6 +15,10 @@
             margin-left: 0;
         }
     }
+
+    @include modular-mq(large) {
+        margin-bottom: 3em;
+    }
 }
 .videos article h1 {
     margin: 0;

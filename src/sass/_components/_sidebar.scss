@@ -7,4 +7,9 @@
         float: right;
         width: 33%;
     }
+
+    @include modular-mq(large) {
+        float: right;
+        width: 300px;
+    }
 }

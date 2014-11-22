@@ -19,6 +19,10 @@
     @include modular-mq(medium) {
         width: 66%;
     }
+
+    @include modular-mq(large) {
+        width: 69%;
+    }
 }
 #footer nav a {
     display: inline-block;
@@ -39,5 +43,12 @@
     #footer .music-links li {
         display: inline-block;
         margin-right: 15px;
+    }
+}
+
+@include modular-mq(large) {
+    .footer-container {
+        margin: 0 auto;
+        width: 940px;
     }
 }
