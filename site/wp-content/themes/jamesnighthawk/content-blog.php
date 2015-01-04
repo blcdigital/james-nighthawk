@@ -14,7 +14,7 @@
 
         <?php if ( 'post' == get_post_type() ) : ?>
             <div class="entry-meta">
-                <?php //blacklabelcreative_posted_on(); ?>
+                <?php posted_on(); ?>
             </div>
         <?php endif; ?>
     </header>

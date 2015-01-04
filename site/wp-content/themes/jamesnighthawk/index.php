@@ -22,13 +22,11 @@
             <h1>Blog</h1>
 
             <?php
-            //blacklabelcreative_content_nav( 'nav-above' );
-
             while ( have_posts() ) : the_post();
                 get_template_part( 'content', 'blog' );
             endwhile;
 
-            //blacklabelcreative_content_nav( 'nav-below' );
+            post_content_nav( 'nav-below' );
         else : ?>
             <article id="post-0" class="post no-results not-found">
                 <header>

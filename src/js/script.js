@@ -10,7 +10,7 @@ JamesNighthawk = (function() {
     // PRIVATE FUNCTIONS
         initVideos = function() {
             var
-                $videos = $('article.videos')
+                $videos = $('li.videos')
             ;
 
             if ($videos.length < 1) {

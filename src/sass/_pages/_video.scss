@@ -2,17 +2,16 @@
 * Video
 **/
 
-.videos article {
+.videos li {
     position: relative;
     margin-bottom: 2em;
 
     @include modular-mq(medium) {
         float: left;
-        margin-left: 5%;
         width: 47.5%;
 
         &:nth-child(2n) {
-            margin-left: 0;
+            margin-left: 5%;
         }
     }
 
@@ -20,18 +19,18 @@
         margin-bottom: 3em;
     }
 }
-.videos article h1 {
+.videos li h1 {
     margin: 0;
     padding-bottom: 0.8em;
     color: #304548;
     font: 20px/1.2em 'RalewayMedium', 'Verdana', 'Lucida Grande', 'Gill Sans', 'Arial', 'Helvetica', sans-serif;
     text-transform: none;
 }
-.videos article a {
+.videos li a {
     position: relative;
     display: block;
 }
-.videos article span {
+.videos li span {
     position: absolute;
     top: 0;
     left: 0;
@@ -41,7 +40,7 @@
     background: rgb(137, 153, 154);
     background: rgba(137, 153, 154, 0.7);
 }
-.videos article strong {
+.videos li strong {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -55,16 +54,26 @@
     text-align: center;
     text-transform: uppercase;
 }
-.videos article a:hover span,
-.videos article a:focus span,
-.touch .videos article span {
+.videos li a:hover span,
+.videos li a:focus span,
+.touch .videos li span {
     display: block;
 }
-.videos article img {
+.videos li img {
     width: 100%;
     height: auto;
 }
 .videos iframe {
     position: absolute;
     left: 0;
+}
+
+.videos {
+    .featured-video {
+        li {
+            float: none;
+            margin: 0 auto 3em;
+            width: 55%;
+        }
+    }
 }
