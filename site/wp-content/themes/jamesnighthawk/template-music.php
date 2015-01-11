@@ -33,28 +33,19 @@
 
                 <article id="album-<?php the_ID(); ?>" <?php post_class(); ?>>
                     <header>
-                        <?php
-                            $thumbAttrs = array(
-                                'class' => 'album-image'
-                            );
-                            if ($custom['itunes-link']) {
+                        <h1>
+                            <?php if ($custom['itunes-link']) {
                                 ?>
-                                    <a href="<?php echo $custom['itunes-link'][0]; ?>" title="Download on iTunes">
-                                        <?php the_post_thumbnail( 'full', $thumbAttrs ); ?>
-                                    </a>
-                                <?php
-                            }
+                                <a href="<?php echo $custom['itunes-link'][0]; ?>" title="Download on iTunes">
+                                    <?php the_title(); ?>
+                                </a>
+                            <?php }
                             if ($custom['download-link']) {
                                 ?>
-                                    <a href="<?php echo $custom['download-link'][0]; ?>" title="Download now">
-                                        <?php the_post_thumbnail( 'full', $thumbAttrs ); ?>
-                                    </a>
-                                <?php
-                            }
-                        ?>
-
-                        <h1>
-                            <?php the_title(); ?>
+                                <a href="<?php echo $custom['download-link'][0]; ?>" title="Download now">
+                                    <?php the_title(); ?>
+                                </a>
+                            <?php } ?>
                             <span>(<?= $custom['year'][0]; ?>)</span>
                         </h1>
 
@@ -81,19 +72,27 @@
                         ?>
                     </header>
 
-                    <ol>
-                        <?php
-                            foreach ($tracks as $track) {
-                                $trackData = explode(',', $track);
-                                ?>
-                                <li>
-                                    <span class="track-title"><?php echo $trackData[0]; ?></span>
-                                    <span class="track-time"><?php echo $trackData[1]; ?></span>
-                                </li>
-                                <?php
-                            }
-                        ?>
-                    </ol>
+                    <?php
+                        if ($custom['soundcloud_widget'][0]) {
+                            echo $custom['soundcloud_widget'][0];
+                        } else {
+                            ?>
+                                <ol>
+                                    <?php
+                                        foreach ($tracks as $track) {
+                                            $trackData = explode(',', $track);
+                                            ?>
+                                            <li>
+                                                <span class="track-title"><?php echo $trackData[0]; ?></span>
+                                                <span class="track-time"><?php echo $trackData[1]; ?></span>
+                                            </li>
+                                            <?php
+                                        }
+                                    ?>
+                                </ol>
+                            <?php
+                        }
+                    ?>
                 </article>
             <?php endwhile; ?>
         </section>

@@ -98,6 +98,25 @@ section.music {
         }
     }
 
+    iframe {
+        margin-bottom: 2em;
+
+        @include modular-mq(small) {
+            clear: both;
+        }
+
+        @include modular-mq(medium) {
+            clear: none;
+            float: right;
+            // margin-left: 240px;
+            width: 67%;
+        }
+
+        @include modular-mq(large) {
+            width: 73%;
+        }
+    }
+
     .track-time {
         float: right;
         color: #7e7979;
