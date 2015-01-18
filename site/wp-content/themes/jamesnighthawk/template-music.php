@@ -33,6 +33,28 @@
 
                 <article id="album-<?php the_ID(); ?>" <?php post_class(); ?>>
                     <header>
+                        <?php
+                            $thumbAttrs = array(
+                                'class' => 'album-image'
+                            );
+                            if (!$custom['soundcloud_widget'][0]) {
+                                if ($custom['itunes-link']) {
+                                    ?>
+                                        <a href="<?php echo $custom['itunes-link'][0]; ?>" title="Download on iTunes">
+                                            <?php the_post_thumbnail( 'full', $thumbAttrs ); ?>
+                                        </a>
+                                    <?php
+                                }
+                                if ($custom['download-link']) {
+                                    ?>
+                                        <a href="<?php echo $custom['download-link'][0]; ?>" title="Download now">
+                                            <?php the_post_thumbnail( 'full', $thumbAttrs ); ?>
+                                        </a>
+                                    <?php
+                                }
+                            }
+                        ?>
+
                         <h1>
                             <?php if ($custom['itunes-link']) {
                                 ?>
@@ -75,8 +97,10 @@
                     <?php
                         if ($custom['soundcloud_widget'][0]) {
                             echo $custom['soundcloud_widget'][0];
-                        } else {
+                        }
+                        if ($custom['show_tracklist'][0] === 'true') {
                             ?>
+                                <h2 class="track-list">Full track list</h2>
                                 <ol>
                                     <?php
                                         foreach ($tracks as $track) {

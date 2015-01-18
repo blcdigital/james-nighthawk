@@ -42,6 +42,9 @@ module.exports = function(grunt) {
             ]
         },
         sass: {
+            options: {
+                sourcemap: 'none'
+            },
             main: {
                 files: {
                     'site/wp-content/themes/jamesnighthawk/style.css': 'src/sass/style.scss',

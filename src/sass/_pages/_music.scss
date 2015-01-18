@@ -46,6 +46,15 @@ section.music {
         margin-bottom: 0.5em;
         color: #123246;
         font: 16px/1.2em 'RalewayBold', 'Verdana', 'Lucida Grande', 'Gill Sans', 'Arial', 'Helvetica', sans-serif;
+
+        &.track-list {
+            clear: both;
+
+            @include modular-mq(medium) {
+                clear: none;
+                margin-left: 240px;
+            }
+        }
     }
 
     .album-image {
