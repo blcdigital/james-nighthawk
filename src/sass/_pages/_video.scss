@@ -73,7 +73,10 @@
         li {
             float: none;
             margin: 0 auto 3em;
-            width: 55%;
+
+            @include modular-mq(medium) {
+                width: 55%;
+            }
         }
     }
 }

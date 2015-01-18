@@ -62,9 +62,13 @@
         font-size: 1.4em;
     }
 
-    time {
-        display: block;
-        margin-bottom: 1em;
+    header {
+        overflow: hidden;
+
+        img {
+            float: left;
+            margin: 0 15px 15px 0;
+        }
     }
 
     li + li,
@@ -88,6 +92,11 @@
     margin-top: 25px;
     padding-top: 20px;
     border-top: 1px solid #b1b1b1;
+
+    p.comment-form-comment,
+    p.form-submit {
+        margin-top: 2em;
+    }
 }
 #respond h3 {
     margin-bottom: 0.5em;
