@@ -1,26 +1,25 @@
 === Twitter Widget Pro ===
-Contributors: aaroncampbell, PeteMall, range, saracannon
+Contributors: aaroncampbell
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=9993090
 Tags: twitter, widget, feed
 Requires at least: 3.0
-Tested up to: 3.6
-Stable tag: 2.5.3
+Tested up to: 4.3
+Stable tag: 2.7.0
 
 A widget that properly handles twitter feeds, including parsing @username, #hashtags, and URLs into links.
 
 == Description ==
 
-A widget that properly handles twitter feeds, including parsing @username,
-#hashtag, and URLs into links.  It supports displaying profiles images, and even
-lets you control whether to display the time and date of a tweet or how log ago
-it happened (about 5 hours ago, etc).
+A widget that properly handles twitter feeds, including parsing @username, #hashtag, and URLs into links.  It supports displaying profiles images, and even lets you control whether to display the time and date of a tweet or how log ago it happened (about 5 hours ago, etc).
 
-<a href="http://bluedogwebservices.com/wordpress-plugin/twitter-widget-pro/">Twitter Widget Pro</a>
+<a href="http://ran.ge/wordpress-plugin/twitter-widget-pro/">Twitter Widget Pro</a>
 Brought to you by <a href="http://ran.ge/" title="WordPress Development">Ran.ge</a>
 
 == Installation ==
 
-1. Use automatic installer.
+1. Use automatic installer to install and active the plugin.
+1. You should see a notice appear in your admin that links you to the settings page.
+1. Follow the instructions to setup your Twitter app and authenticate your account (an unfortunate step made necessary by Twitter's API changes).
 1. In WordPress admin go to 'Appearance' -> 'Widgets' and add "Twitter Widget Pro" to one of your widget-ready areas of your site
 
 == Frequently Asked Questions ==
@@ -132,6 +131,15 @@ Aparently the database queries required to display the friends feed was causing 
 
 == Upgrade Notice ==
 
+= 2.7.0 =
+Updates to avoid notices in WordPress 4.3 and PHP 7
+
+= 2.6.0 =
+Fix lists and add ability to remove accounts, as well as plenty of minor bug fixes.
+
+= 2.5.4 =
+Minor fix for a strict PHP notice
+
 = 2.5.3 =
 Another SSL verification fix and add Twitter List support to shortcodes
 
@@ -144,49 +152,22 @@ Fix potential conflict with other oAuth plugins
 = 2.5.0 =
 Upgrade to the new Twitter API and add support for lists
 
-= 2.4.1 =
-Better support for hashtags with international characters & new German translation
-
-= 2.4.0 =
-Better linking to fix issues with links followed by punctuation plus support for extended characters in hashtags
-
-= 2.3.11 =
-Fix issue with "Include Retweets" not unchecking
-
-= 2.3.10 =
-Update feeds and links to Ran.ge, moves screenshots outside of plugin zip
-
-= 2.3.9 =
-Display dates based on your WordPress timezone setting
-
-= 2.3.8 =
-Fix issue with mixed content warning on HTTPS pages
-
-= 2.3.7 =
-Adds an option to clear update locks, which may fix the updating issue some people are having
-
-= 2.3.6 =
-Small fix for "invalid argument supplied for foreach" error that some people are getting
-
-= 2.3.5 =
-Added HTTP & HTTPS API setting and fixed support forum links
-
-= 2.3.4 =
-Fixed the conflict with Jetpack!  Also a new Arabic translation
-
-= 2.3.3 =
-Fixed issue with updates getting stuck, and add data-lang support for Twitter intents
-
-= 2.3.2 =
-Fixes some strings that were not translatable
-
-= 2.3.1 =
-Fixes an issue with the intents and follow settings not being saved
-
-= 2.3.0 =
-Fewer "could not connect to Twitter" messages, new links (reply, retweet, favorite), new follow button, and avatar fixes
-
 == Changelog ==
+
+= 2.7.0 =
+* Use __contrsuct instead of WP_Widget->WP_Widget
+* Move away from Range
+* Ability to test loop back requests...consider this beta :)
+* Removes even opt-in credit link
+
+= 2.6.0 =
+* Add ability to remove accounts
+* Fix bug that made lists not work
+* Work around PHP bug in json_decode() - https://bugs.php.net/bug.php?id=45989
+* Fix some strict standards warnings
+
+= 2.5.4 =
+* Minor fix for a strict PHP notice
 
 = 2.5.3 =
 * Don't force verification of Twitter's SSL certificate

@@ -33,5 +33,5 @@ Thumbs.db
 .vagrant/
 .sass-cache/
 node_modules/
-site/wp-config-*
+site/wp-config_*
 *.map
