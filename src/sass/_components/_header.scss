@@ -3,6 +3,7 @@
 **/
 
 #header {
+    position: relative;
     margin-bottom: 20px;
     background: #000 url(assets/images/header.jpg) center top no-repeat;
     background-size: 100%;
@@ -43,6 +44,66 @@
         padding: 0 10px 15px;
         background: url(assets/images/background/bg-header.jpg) center bottom repeat-x;
         font: 14px/1.2em 'MontserratRegular', 'Verdana', 'Lucida Grande', 'Gill Sans', 'Arial', 'Helvetica', sans-serif;
+
+        ul {
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.5s ease-in-out;
+
+            @include modular-mq(medium) {
+                max-height: 250px;
+                text-align: justify;
+
+                &:after {
+                    width: 100%;
+                    display: inline-block;
+                    content: "";
+                    height: 0px;
+                    line-height: 0;
+                }
+            }
+        }
+
+        &.nav-open {
+            ul {
+                max-height: 250px;
+            }
+        }
+
+        a {
+            display: block;
+            padding: 10px;
+            text-transform: uppercase;
+
+            &.nav-toggle {
+                position: absolute;
+                top: 50px;
+                right: 10px;
+                padding: 0;
+                width: 2em;
+                height: 1.5em;
+                text-indent: -999em;
+
+                &:before {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 1.75em;
+                    height: 0.3em;
+                    background: #72888b;
+                    box-shadow: 0 0.5em 0 0 #72888b, 0 1em 0 0 #72888b;
+                }
+
+                @include modular-mq(small) {
+                    top: 78px;
+                }
+
+                @include modular-mq(medium) {
+                    display: none;
+                }
+            }
+        }
     }
 
     nav a:hover,
@@ -52,18 +113,19 @@
     }
 
     li {
-        display: inline-block;
-        margin-left: 10px;
-        text-transform: uppercase;
+        font-size: 18px;
+        text-align: center;
 
         &:first-child {
-            margin-left: 0;
+            padding-top: 10px;
         }
 
         @include modular-mq(medium) {
-            width: 15%;
-            font-size: 18px;
-            text-align: center;
+            display: inline-block;
+
+            &:first-child {
+                padding-top: 0;
+            }
         }
     }
 

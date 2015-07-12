@@ -258,7 +258,7 @@
         // Echo out the field
         echo '<p><label for="_venue">Venue</label>';
         echo '<input type="text" name="_venue" id="_name" value="', $venue, '" class="widefat" /></p>';
-        echo '<p><label for="_date">Email</label>';
+        echo '<p><label for="_date">Date</label>';
         echo '<input type="date" name="_date" id="_date" value="', $date, '" class="widefat" /></p>';
     }
 

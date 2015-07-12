@@ -33,6 +33,17 @@ JamesNighthawk = (function() {
                     }).attr('src', 'http://www.youtube.com/embed/' + $item.find('a').attr('data-video')).appendTo($item);
                 });
             });
+        },
+        menuToggle = function() {
+            var
+                $menuToggle = $('#nav').find('.nav-toggle')
+            ;
+
+            $menuToggle.on('click', function(e) {
+                e.preventDefault();
+
+                $('#nav').toggleClass('nav-open');
+            });
         }
     ;
 
@@ -43,6 +54,9 @@ JamesNighthawk = (function() {
 
             // init videos
             initVideos();
+
+            // init nav toggle
+            menuToggle();
         }//,
         // pageInit: function() {
         //     // page load
