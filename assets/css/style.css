@@ -73,12 +73,6 @@ header {
   overflow: hidden;
 }
 
-/* @media (min-width: 479px) {
-  header {
-    background-size: auto;
-  }
-} */
-
 header h1 {
   float: left;
   width: 191px;
@@ -88,7 +82,7 @@ header h1 {
   background-size: 100%;
   text-indent: -999em;
 }
-  
+
 @media (min-width: 767px) {
   header h1 {
     margin: 70px 10px;
